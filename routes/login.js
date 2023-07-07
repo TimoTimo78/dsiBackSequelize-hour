@@ -36,7 +36,7 @@ const path = (app) => {
               const message = `problème de comparaison des mots de passe`;
               return res.status(401).json({ message });
             } else if (result) {
-              const token = jwt.sign({ email: email }, "secretKey",{ expiresIn: '2h' 
+              const token = jwt.sign({ email: email }, "secretKey",{ expiresIn: '3h' 
                  });
               res.json({ token: token });
             } else {
